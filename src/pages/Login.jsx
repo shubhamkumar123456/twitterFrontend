@@ -20,7 +20,7 @@ const Login = () => {
       email:emailRef.current.value,
       password:passwordRef.current.value
     }
-    let res = await axios.post('http://localhost:8080/users/login',obj)
+    let res = await axios.post('https://twitterbackend-6xyo.onrender.com/users/login',obj)
     // console.log(res)
     if(res.data.success){
       console.log(res.data)

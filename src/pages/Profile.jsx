@@ -14,7 +14,7 @@ export default function Profile() {
     console.log(details)
     let store = React.useContext(UserContext)
     let getUser = async ()=>{
-        let res = await axios.get('http://localhost:8080/users/getUser',{
+        let res = await axios.get('https://twitterbackend-6xyo.onrender.com/users/getUser',{
             headers:{
                 'Authorization':store.details.token
             }
@@ -47,7 +47,7 @@ export default function Profile() {
             obj.password=password
         }
 
-      let res = await fetch(`http://localhost:8080/users/update`,{
+      let res = await fetch(`https://twitterbackend-6xyo.onrender.com/users/update`,{
         method:"PUT",
         headers:{
             'content-type':'application/json',

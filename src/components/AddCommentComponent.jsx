@@ -28,7 +28,7 @@ const AddComment = (props) => {
     let obj = {
       text: commentRef.current.value
     }
-    let res = await fetch(`http://localhost:8080/posts/addComment/${postId}`, {
+    let res = await fetch(`https://twitterbackend-6xyo.onrender.com/posts/addComment/${postId}`, {
       method: "POST",
       headers: {
         'content-type': 'application/json',
@@ -47,7 +47,7 @@ const AddComment = (props) => {
   const handleDeleteComment =async(postId,commentId)=>{
       console.log(postId)
       console.log(commentId)
-      let res = await axios.delete(`http://localhost:8080/posts/deletecomment/${postId}/${commentId}`)
+      let res = await axios.delete(`https://twitterbackend-6xyo.onrender.com/posts/deletecomment/${postId}/${commentId}`)
       console.log(res.data)
       props.getAllData()
   }

@@ -22,7 +22,7 @@ const Signup = () => {
       return alert('please fill all the fields') 
     }
     // console.log(obj)
-    let res = await axios.post('http://localhost:8080/users/create',obj)
+    let res = await axios.post('https://twitterbackend-6xyo.onrender.com/users/create',obj)
     console.log(res.data)
     if(res.data.success){
       toast.success(res.data.msg,{position:'top-center'})
